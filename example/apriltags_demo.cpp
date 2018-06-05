@@ -46,7 +46,7 @@ extern char *optarg;
 
 
 const char* windowName = "apriltags_demo";
-
+cv::Mat map1, map2;
 
 // utility function to provide current system time (used below in
 // determining frame rate at which images are being processed)
@@ -169,40 +169,6 @@ public:
   }
 
   void setupVideo() {
-
-#ifdef EXPOSURE_CONTROL
-    // manually setting camera exposure settings; OpenCV/v4l1 doesn't
-    // support exposure control; so here we manually use v4l2 before
-    // opening the device via OpenCV; confirmed to work with Logitech
-    // C270; try exposure=20, gain=100, brightness=150
-
-    string video_str = "/dev/video0";
-    video_str[10] = '0' + m_deviceId;
-    int device = v4l2_open(video_str.c_str(), O_RDWR | O_NONBLOCK);
-
-    if (m_exposure >= 0) {
-      // not sure why, but v4l2_set_control() does not work for
-      // V4L2_CID_EXPOSURE_AUTO...
-      struct v4l2_control c;
-      c.id = V4L2_CID_EXPOSURE_AUTO;
-      c.value = 1; // 1=manual, 3=auto; V4L2_EXPOSURE_AUTO fails...
-      if (v4l2_ioctl(device, VIDIOC_S_CTRL, &c) != 0) {
-        cout << "Failed to set... " << strerror(errno) << endl;
-      }
-      cout << "exposure: " << m_exposure << endl;
-      v4l2_set_control(device, V4L2_CID_EXPOSURE_ABSOLUTE, m_exposure*6);
-    }
-    if (m_gain >= 0) {
-      cout << "gain: " << m_gain << endl;
-      v4l2_set_control(device, V4L2_CID_GAIN, m_gain*256);
-    }
-    if (m_brightness >= 0) {
-      cout << "brightness: " << m_brightness << endl;
-      v4l2_set_control(device, V4L2_CID_BRIGHTNESS, m_brightness*256);
-    }
-    v4l2_close(device);
-#endif 
-
     // find and open a USB camera (built in laptop camera, web cam etc)
     m_cap = cv::VideoCapture(m_deviceId);
         if(!m_cap.isOpened()) {
@@ -215,7 +181,26 @@ public:
     cout << "Actual resolution: "
          << m_cap.get(CV_CAP_PROP_FRAME_WIDTH) << "x"
          << m_cap.get(CV_CAP_PROP_FRAME_HEIGHT) << endl;
+    cv::Mat image;
+    m_cap >> image;
+    cv::Mat cameraMatrix = cv::Mat::eye(3, 3, CV_64F);
+    cameraMatrix.at<double>(0, 0) = 4.745537506243416e+02;
+    cameraMatrix.at<double>(0, 1) = 0.0;
+    cameraMatrix.at<double>(0, 2) = 2.974489590204837e+02;
+    cameraMatrix.at<double>(1, 1) = 4.745690628394497e+02;
+    cameraMatrix.at<double>(1, 2) = 2.651734958206504e+02;
 
+    cv::Mat distCoeffs = cv::Mat::zeros(5, 1, CV_64F);
+    distCoeffs.at<double>(0, 0) = -0.416811439187776;
+    distCoeffs.at<double>(1, 0) =  0.206770846440788;
+    distCoeffs.at<double>(2, 0) =  0;
+    distCoeffs.at<double>(3, 0) =  0;
+    distCoeffs.at<double>(4, 0) =  0;
+    cv::Size imageSize;
+    imageSize = image.size();
+    cv::initUndistortRectifyMap(cameraMatrix, distCoeffs, cv::Mat(),
+        cv::getOptimalNewCameraMatrix(cameraMatrix, distCoeffs, imageSize, 1, imageSize, 0),
+        imageSize, CV_16SC2, map1, map2);
   }
 
   void print_detection(AprilTags::TagDetection& detection) const {
