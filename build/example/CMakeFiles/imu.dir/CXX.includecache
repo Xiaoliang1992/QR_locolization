@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/xiaoliang/APP/apriltags/example/Serial.cpp
+/home/xiaoliang/APP/QR_locolization/example/Serial.cpp
 fcntl.h
 -
 termios.h
@@ -20,13 +20,13 @@ sstream
 unistd.h
 -
 Serial.h
-/home/xiaoliang/APP/apriltags/example/Serial.h
+/home/xiaoliang/APP/QR_locolization/example/Serial.h
 
-/home/xiaoliang/APP/apriltags/example/Serial.h
+/home/xiaoliang/APP/QR_locolization/example/Serial.h
 string
 -
 
-/home/xiaoliang/APP/apriltags/example/imu.cpp
+/home/xiaoliang/APP/QR_locolization/example/imu.cpp
 iostream
 -
 string
@@ -36,5 +36,5 @@ stdio.h
 math.h
 -
 Serial.h
-/home/xiaoliang/APP/apriltags/example/Serial.h
+/home/xiaoliang/APP/QR_locolization/example/Serial.h
 

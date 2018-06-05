@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/xiaoliang/APP/apriltags
+CMAKE_SOURCE_DIR = /home/xiaoliang/APP/QR_locolization
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/xiaoliang/APP/apriltags/build
+CMAKE_BINARY_DIR = /home/xiaoliang/APP/QR_locolization/build
 
 # Utility rule file for tmp.
 
@@ -67,6 +67,6 @@ CMakeFiles/tmp.dir/clean:
 .PHONY : CMakeFiles/tmp.dir/clean
 
 CMakeFiles/tmp.dir/depend:
-	cd /home/xiaoliang/APP/apriltags/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xiaoliang/APP/apriltags /home/xiaoliang/APP/apriltags /home/xiaoliang/APP/apriltags/build /home/xiaoliang/APP/apriltags/build /home/xiaoliang/APP/apriltags/build/CMakeFiles/tmp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/xiaoliang/APP/QR_locolization/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xiaoliang/APP/QR_locolization /home/xiaoliang/APP/QR_locolization /home/xiaoliang/APP/QR_locolization/build /home/xiaoliang/APP/QR_locolization/build /home/xiaoliang/APP/QR_locolization/build/CMakeFiles/tmp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/tmp.dir/depend
 

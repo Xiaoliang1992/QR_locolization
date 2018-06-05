@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/xiaoliang/APP/apriltags
+CMAKE_SOURCE_DIR = /home/xiaoliang/APP/QR_locolization
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/xiaoliang/APP/apriltags/build
+CMAKE_BINARY_DIR = /home/xiaoliang/APP/QR_locolization/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -124,9 +124,9 @@ install/strip/fast: install/strip
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/xiaoliang/APP/apriltags/build/CMakeFiles /home/xiaoliang/APP/apriltags/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xiaoliang/APP/QR_locolization/build/CMakeFiles /home/xiaoliang/APP/QR_locolization/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/xiaoliang/APP/apriltags/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xiaoliang/APP/QR_locolization/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

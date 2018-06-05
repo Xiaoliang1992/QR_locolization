@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/xiaoliang/APP/apriltags/build/include -I/usr/local/include -I/home/xiaoliang/APP/apriltags/AprilTags -I/home/xiaoliang/APP/apriltags/. -I/opt/local/include -I/usr/local/include/opencv -I/usr/include/eigen3 
+CXX_INCLUDES = -I/home/xiaoliang/APP/QR_locolization/build/include -I/usr/local/include -I/home/xiaoliang/APP/QR_locolization/AprilTags -I/home/xiaoliang/APP/QR_locolization/. -I/opt/local/include -I/usr/local/include/opencv -I/usr/include/eigen3 
 

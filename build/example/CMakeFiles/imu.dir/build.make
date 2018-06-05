@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/xiaoliang/APP/apriltags
+CMAKE_SOURCE_DIR = /home/xiaoliang/APP/QR_locolization
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/xiaoliang/APP/apriltags/build
+CMAKE_BINARY_DIR = /home/xiaoliang/APP/QR_locolization/build
 
 # Include any dependencies generated for this target.
 include example/CMakeFiles/imu.dir/depend.make
@@ -59,16 +59,16 @@ include example/CMakeFiles/imu.dir/flags.make
 
 example/CMakeFiles/imu.dir/imu.cpp.o: example/CMakeFiles/imu.dir/flags.make
 example/CMakeFiles/imu.dir/imu.cpp.o: ../example/imu.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiaoliang/APP/apriltags/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object example/CMakeFiles/imu.dir/imu.cpp.o"
-	cd /home/xiaoliang/APP/apriltags/build/example && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/imu.dir/imu.cpp.o -c /home/xiaoliang/APP/apriltags/example/imu.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiaoliang/APP/QR_locolization/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object example/CMakeFiles/imu.dir/imu.cpp.o"
+	cd /home/xiaoliang/APP/QR_locolization/build/example && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/imu.dir/imu.cpp.o -c /home/xiaoliang/APP/QR_locolization/example/imu.cpp
 
 example/CMakeFiles/imu.dir/imu.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/imu.dir/imu.cpp.i"
-	cd /home/xiaoliang/APP/apriltags/build/example && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiaoliang/APP/apriltags/example/imu.cpp > CMakeFiles/imu.dir/imu.cpp.i
+	cd /home/xiaoliang/APP/QR_locolization/build/example && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiaoliang/APP/QR_locolization/example/imu.cpp > CMakeFiles/imu.dir/imu.cpp.i
 
 example/CMakeFiles/imu.dir/imu.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/imu.dir/imu.cpp.s"
-	cd /home/xiaoliang/APP/apriltags/build/example && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiaoliang/APP/apriltags/example/imu.cpp -o CMakeFiles/imu.dir/imu.cpp.s
+	cd /home/xiaoliang/APP/QR_locolization/build/example && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiaoliang/APP/QR_locolization/example/imu.cpp -o CMakeFiles/imu.dir/imu.cpp.s
 
 example/CMakeFiles/imu.dir/imu.cpp.o.requires:
 
@@ -83,16 +83,16 @@ example/CMakeFiles/imu.dir/imu.cpp.o.provides.build: example/CMakeFiles/imu.dir/
 
 example/CMakeFiles/imu.dir/Serial.cpp.o: example/CMakeFiles/imu.dir/flags.make
 example/CMakeFiles/imu.dir/Serial.cpp.o: ../example/Serial.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiaoliang/APP/apriltags/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object example/CMakeFiles/imu.dir/Serial.cpp.o"
-	cd /home/xiaoliang/APP/apriltags/build/example && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/imu.dir/Serial.cpp.o -c /home/xiaoliang/APP/apriltags/example/Serial.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiaoliang/APP/QR_locolization/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object example/CMakeFiles/imu.dir/Serial.cpp.o"
+	cd /home/xiaoliang/APP/QR_locolization/build/example && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/imu.dir/Serial.cpp.o -c /home/xiaoliang/APP/QR_locolization/example/Serial.cpp
 
 example/CMakeFiles/imu.dir/Serial.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/imu.dir/Serial.cpp.i"
-	cd /home/xiaoliang/APP/apriltags/build/example && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiaoliang/APP/apriltags/example/Serial.cpp > CMakeFiles/imu.dir/Serial.cpp.i
+	cd /home/xiaoliang/APP/QR_locolization/build/example && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiaoliang/APP/QR_locolization/example/Serial.cpp > CMakeFiles/imu.dir/Serial.cpp.i
 
 example/CMakeFiles/imu.dir/Serial.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/imu.dir/Serial.cpp.s"
-	cd /home/xiaoliang/APP/apriltags/build/example && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiaoliang/APP/apriltags/example/Serial.cpp -o CMakeFiles/imu.dir/Serial.cpp.s
+	cd /home/xiaoliang/APP/QR_locolization/build/example && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiaoliang/APP/QR_locolization/example/Serial.cpp -o CMakeFiles/imu.dir/Serial.cpp.s
 
 example/CMakeFiles/imu.dir/Serial.cpp.o.requires:
 
@@ -137,8 +137,8 @@ bin/imu: /usr/local/lib/libopencv_imgproc.so.2.4.12
 bin/imu: /usr/local/lib/libopencv_flann.so.2.4.12
 bin/imu: /usr/local/lib/libopencv_core.so.2.4.12
 bin/imu: example/CMakeFiles/imu.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/xiaoliang/APP/apriltags/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ../bin/imu"
-	cd /home/xiaoliang/APP/apriltags/build/example && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/imu.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/xiaoliang/APP/QR_locolization/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ../bin/imu"
+	cd /home/xiaoliang/APP/QR_locolization/build/example && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/imu.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 example/CMakeFiles/imu.dir/build: bin/imu
@@ -151,10 +151,10 @@ example/CMakeFiles/imu.dir/requires: example/CMakeFiles/imu.dir/Serial.cpp.o.req
 .PHONY : example/CMakeFiles/imu.dir/requires
 
 example/CMakeFiles/imu.dir/clean:
-	cd /home/xiaoliang/APP/apriltags/build/example && $(CMAKE_COMMAND) -P CMakeFiles/imu.dir/cmake_clean.cmake
+	cd /home/xiaoliang/APP/QR_locolization/build/example && $(CMAKE_COMMAND) -P CMakeFiles/imu.dir/cmake_clean.cmake
 .PHONY : example/CMakeFiles/imu.dir/clean
 
 example/CMakeFiles/imu.dir/depend:
-	cd /home/xiaoliang/APP/apriltags/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xiaoliang/APP/apriltags /home/xiaoliang/APP/apriltags/example /home/xiaoliang/APP/apriltags/build /home/xiaoliang/APP/apriltags/build/example /home/xiaoliang/APP/apriltags/build/example/CMakeFiles/imu.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/xiaoliang/APP/QR_locolization/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xiaoliang/APP/QR_locolization /home/xiaoliang/APP/QR_locolization/example /home/xiaoliang/APP/QR_locolization/build /home/xiaoliang/APP/QR_locolization/build/example /home/xiaoliang/APP/QR_locolization/build/example/CMakeFiles/imu.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : example/CMakeFiles/imu.dir/depend
 
